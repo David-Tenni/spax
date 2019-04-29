@@ -21,9 +21,13 @@ public class PlayerController : MonoBehaviour
         // Ctrl was pressed, launch a projectile
         if (Input.GetButtonDown("Fire1")&& ammo > 0)
         {
-            Instantiate(Crate, transform.position, transform.rotation);
-            ammo--;
+            Fire();
         }
+    }
+    void Fire()
+    {
+        Instantiate(Crate, transform.position, transform.rotation);
+        ammo--;
     }
     void FixedUpdate()
     {
