@@ -6,10 +6,12 @@ public class PlayerController : MonoBehaviour
 {
     // Start is called before the first frame update
     public GameObject Crate;
-    public float speed;             
+    public float speed;
+    public int ammo;
     private Rigidbody2D rb2d;  
     void Start()
     {
+        ammo = 20;
         rb2d = GetComponent<Rigidbody2D>();
     }
 
@@ -17,9 +19,10 @@ public class PlayerController : MonoBehaviour
     void Update()
     {
         // Ctrl was pressed, launch a projectile
-        if (Input.GetButtonDown("Fire1"))
+        if (Input.GetButtonDown("Fire1")&& ammo > 0)
         {
             Instantiate(Crate, transform.position, transform.rotation);
+            ammo--;
         }
     }
     void FixedUpdate()

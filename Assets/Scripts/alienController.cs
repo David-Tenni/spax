@@ -26,6 +26,11 @@ public class alienController : MonoBehaviour
         if (col.gameObject.tag == "wall")
         {
             goLeft = !goLeft;
+            transform.Translate(Vector2.up * 1.2f);
+        }
+        if (col.gameObject.tag == "Crate")
+        {
+            Destroy(this.gameObject);
         }
     }
 
