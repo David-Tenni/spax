@@ -46,7 +46,7 @@ GameObject:
   - component: {fileID: 6403728346788154600}
   m_Layer: 0
   m_Name: DZ_Left
-  m_TagString: Untagged
+  m_TagString: lowScore
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -152,7 +152,7 @@ GameObject:
   - component: {fileID: 6403728347083424806}
   m_Layer: 0
   m_Name: DZ_MID
-  m_TagString: Untagged
+  m_TagString: highScore
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -258,7 +258,7 @@ GameObject:
   - component: {fileID: 6403728347545151319}
   m_Layer: 0
   m_Name: DZ_Right
-  m_TagString: Untagged
+  m_TagString: lowScore
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
