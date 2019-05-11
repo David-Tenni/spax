@@ -11,7 +11,7 @@ GameObject:
   - component: {fileID: 3257822986918833524}
   - component: {fileID: 3257822986918833527}
   - component: {fileID: 3257822986918833526}
-  - component: {fileID: 3257822986918833513}
+  - component: {fileID: 3912946455179910981}
   - component: {fileID: 3257822986918833525}
   m_Layer: 0
   m_Name: Aliens1
@@ -108,7 +108,7 @@ BoxCollider2D:
   serializedVersion: 2
   m_Size: {x: 33.34, y: 33.34}
   m_EdgeRadius: 0
---- !u!114 &3257822986918833513
+--- !u!114 &3912946455179910981
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -117,9 +117,12 @@ MonoBehaviour:
   m_GameObject: {fileID: 3257822986918833512}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 46855a27a286ff14ab3a874a2c1defb8, type: 3}
+  m_Script: {fileID: 11500000, guid: 5ce1dfaed6a9156478bb6013747104f9, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  speed: 0
+  shot: {fileID: 0}
+  fireRate: 0.997
 --- !u!50 &3257822986918833525
 Rigidbody2D:
   serializedVersion: 4

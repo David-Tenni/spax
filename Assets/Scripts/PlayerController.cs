@@ -7,6 +7,7 @@ public class PlayerController : MonoBehaviour
     // Start is called before the first frame update
     public GameObject Crate;
     public float speed;
+    public float score;
     public int ammo;
     private Rigidbody2D rb2d;  
     void Start()
@@ -23,6 +24,9 @@ public class PlayerController : MonoBehaviour
         {
             Fire();
         }
+    }
+    void updateScore(float points) {
+        score = score + points;
     }
     void Fire()
     {
