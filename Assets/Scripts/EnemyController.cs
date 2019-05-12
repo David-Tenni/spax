@@ -22,7 +22,7 @@ public class EnemyController : MonoBehaviour {
 		enemyHolder.position += Vector3.right * speed;
 
 		foreach (Transform enemy in enemyHolder) {
-			if (enemy.position.x < -4.45 || enemy.position.x > 5.5) {
+			if (enemy.position.x < -8 || enemy.position.x > 7) {
 				speed = -speed;
 				enemyHolder.position += Vector3.up * 0.5f;
 				return;
@@ -52,6 +52,12 @@ public class EnemyController : MonoBehaviour {
        if(col.gameObject.tag == "Crate")
         {
             Destroy(col.gameObject);
+            Destroy(gameObject);
+        }
+        if (col.gameObject.tag == "Player")
+        {
+            Destroy(col.gameObject);
+            Time.timeScale = 0;
             Destroy(gameObject);
         }
     }

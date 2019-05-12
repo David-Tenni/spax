@@ -25,8 +25,9 @@ public class PlayerController : MonoBehaviour
             Fire();
         }
     }
-    void updateScore(float points) {
+    public void updateScore(float points) {
         score = score + points;
+        Debug.Log(score);
     }
     void Fire()
     {
