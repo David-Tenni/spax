@@ -20,4 +20,16 @@ public class CrateScript : MonoBehaviour
     {
         Destroy(gameObject);
     }
+    void OnCollisionEnter2D(Collision2D col)
+    {
+        if(col.gameObject.tag == "highScore")
+        {
+            Destroy(gameObject);
+        }
+        if (col.gameObject.tag == "lowScore")
+        {
+            Destroy(gameObject);
+        }
+    }
+
 }
