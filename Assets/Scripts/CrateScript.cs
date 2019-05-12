@@ -24,10 +24,14 @@ public class CrateScript : MonoBehaviour
     {
         if(col.gameObject.tag == "highScore")
         {
+            GameObject player = GameObject.FindGameObjectWithTag("Player");
+            player.GetComponent<PlayerController>().updateScore(50);
             Destroy(gameObject);
         }
         if (col.gameObject.tag == "lowScore")
         {
+            GameObject player = GameObject.FindGameObjectWithTag("Player");
+            player.GetComponent<PlayerController>().updateScore(10);
             Destroy(gameObject);
         }
     }
