@@ -8,7 +8,6 @@ public class EnemyController : MonoBehaviour {
 	private Transform enemyHolder;
 	public float speed;
 
-	public GameObject shot;
 	public float fireRate = 0.997f;
 
 	// Use this for initialization
@@ -28,10 +27,6 @@ public class EnemyController : MonoBehaviour {
 				return;
 			}
 
-			//EnemyBulletController called too?
-			if (Random.value > fireRate) {
-				Instantiate (shot, enemy.position, enemy.rotation);
-			}
 
 
 			if (enemy.position.y <= -4) {
