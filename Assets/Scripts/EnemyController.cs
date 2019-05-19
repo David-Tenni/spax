@@ -2,6 +2,7 @@
 using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.UI;
+using UnityEngine.SceneManagement;
 
 public class EnemyController : MonoBehaviour {
 
@@ -16,12 +17,23 @@ public class EnemyController : MonoBehaviour {
 		enemyHolder = GetComponent<Transform> ();
 	}
 
-	void MoveEnemy()
+    private void Update()
+    {
+#if UNITY_EDITOR
+
+        if (Input.GetKeyDown(KeyCode.X))
+        {
+            GoToEndGameScene();
+        }
+#endif
+    }
+
+    void MoveEnemy()
 	{
 		enemyHolder.position += Vector3.right * speed;
 
 		foreach (Transform enemy in enemyHolder) {
-			if (enemy.position.x < -8 || enemy.position.x > 7) {
+			if (enemy.position.x < -8 || enemy.position.x > 8) {
 				speed = -speed;
 				enemyHolder.position += Vector3.up * 0.5f;
 				return;
@@ -52,8 +64,15 @@ public class EnemyController : MonoBehaviour {
         if (col.gameObject.tag == "Player")
         {
             Destroy(col.gameObject);
-            Time.timeScale = 0;
+            //Time.timeScale = 0;
             Destroy(gameObject);
+            GoToEndGameScene();
+  
         }
+    }
+
+    private void GoToEndGameScene()
+    {
+        SceneManager.LoadScene("ENDGAME");
     }
 }
