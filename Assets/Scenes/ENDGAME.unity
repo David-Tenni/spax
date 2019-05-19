@@ -169,7 +169,7 @@ MonoBehaviour:
       m_Calls: []
     m_TypeName: UnityEngine.UI.MaskableGraphic+CullStateChangedEvent, UnityEngine.UI,
       Version=1.0.0.0, Culture=neutral, PublicKeyToken=null
-  m_Sprite: {fileID: 21300000, guid: ef2eb4f284a2785499c906c046096d1b, type: 3}
+  m_Sprite: {fileID: 21300000, guid: fddfc000d61be764b937df05ab63f9c9, type: 3}
   m_Type: 0
   m_PreserveAspect: 0
   m_FillCenter: 1
@@ -222,7 +222,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: 477.15057, y: 126.276276}
+  m_AnchoredPosition: {x: 477.15057, y: 104}
   m_SizeDelta: {x: 286.8, y: 53.8}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &115827716
@@ -351,7 +351,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: 477.15057, y: 197.77628}
+  m_AnchoredPosition: {x: 477.15057, y: 164}
   m_SizeDelta: {x: 286.8, y: 53.8}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &206836983
@@ -947,7 +947,9 @@ MonoBehaviour:
     m_HorizontalOverflow: 0
     m_VerticalOverflow: 0
     m_LineSpacing: 1
-  m_Text: Play Game
+  m_Text: 'RESTART
+
+'
 --- !u!222 &1997495823
 CanvasRenderer:
   m_ObjectHideFlags: 0
