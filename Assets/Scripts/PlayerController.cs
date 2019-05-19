@@ -1,7 +1,7 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
-
+using UnityEngine.UI;
 public class PlayerController : MonoBehaviour
 {
     // Start is called before the first frame update
@@ -9,7 +9,8 @@ public class PlayerController : MonoBehaviour
     public float speed;
     public float score;
     public int ammo;
-    private Rigidbody2D rb2d;  
+    public Text scoreText;
+    private Rigidbody2D rb2d;
     void Start()
     {
         ammo = 20;
@@ -28,6 +29,8 @@ public class PlayerController : MonoBehaviour
     public void updateScore(float points) {
         score = score + points;
         Debug.Log(score);
+        scoreText.text = "Score: " + score;
+
     }
     void Fire()
     {
@@ -43,4 +46,5 @@ public class PlayerController : MonoBehaviour
 
         rb2d.AddForce(movement * speed);
     }
+
 }
