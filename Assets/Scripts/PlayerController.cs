@@ -10,6 +10,7 @@ public class PlayerController : MonoBehaviour
     public float score;
     public int ammo;
     public Text scoreText;
+    public Text ammoText;
     private Rigidbody2D rb2d;
     void Start()
     {
@@ -36,6 +37,8 @@ public class PlayerController : MonoBehaviour
     {
         Instantiate(Crate, transform.position, transform.rotation);
         ammo--;
+        ammoText.text = "Crates: " + ammo;
+
     }
     void FixedUpdate()
     {
