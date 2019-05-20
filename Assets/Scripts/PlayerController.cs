@@ -9,6 +9,7 @@ public class PlayerController : MonoBehaviour
     public GameObject Crate;
     public float speed;
     public float score;
+    public AudioSource dropSound;
     public int ammo;
     public Text scoreText;
     public Text ammoText;
@@ -42,6 +43,7 @@ public class PlayerController : MonoBehaviour
     {
         Instantiate(Crate, transform.position, transform.rotation);
         ammo--;
+        dropSound.Play();
         ammoText.text = "Crates: " + ammo;
 
     }
