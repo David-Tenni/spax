@@ -2,6 +2,7 @@
 using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.UI;
+using UnityEngine.SceneManagement;
 public class PlayerController : MonoBehaviour
 {
     // Start is called before the first frame update
@@ -26,6 +27,10 @@ public class PlayerController : MonoBehaviour
         {
             Fire();
         }
+        if (ammo == 0)
+        {
+            GoToEndGameScene();
+        }
     }
     public void updateScore(float points) {
         score = score + points;
@@ -48,6 +53,10 @@ public class PlayerController : MonoBehaviour
         Vector2 movement = new Vector2(moveHorizontal, 0f);
 
         rb2d.AddForce(movement * speed);
+    }
+    private void GoToEndGameScene()
+    {
+        SceneManager.LoadScene("ENDGAME");
     }
 
 }
