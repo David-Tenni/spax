@@ -5,7 +5,7 @@ using UnityEngine.UI;
 using UnityEngine.SceneManagement;
 
 public class EnemyController : MonoBehaviour {
-
+    public AudioSource deathsound;
 	private Transform enemyHolder;
 	public float speed;
 
@@ -60,6 +60,7 @@ public class EnemyController : MonoBehaviour {
         {
             Destroy(col.gameObject);
             Destroy(gameObject);
+            deathsound.Play();
         }
         if (col.gameObject.tag == "Player")
         {
