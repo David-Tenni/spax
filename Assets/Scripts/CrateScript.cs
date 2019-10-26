@@ -10,7 +10,6 @@ public class CrateScript : MonoBehaviour
         
     }
 
-    // Update is called once per frame
     void Update()
     {
         
